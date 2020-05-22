@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Reem+Kufi">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'app_name/base.css' %}">
+    <!-- color pack CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'app_name/default_white_color_pack.css' %}">
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="{% static 'app_name/images/icon.png' %}" sizes="32x32">
+
+    <title> page_name {% block title_block %}{% endblock %}</title>
+
+</head>
+
+<body class="mt-0">
+  <header class="site-header fixed-top">
+    <nav class="navbar navbar-expand-md navbar-light bg-white px-0 pt-0">
+      <div class="container h-100">
+        <!-- brand link - to the home page -->
+        <a class="navbar-brand mr-4 verdana" href="/">website_name</a>
+        <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <!-- Links to pages -->
+              <a class="btn nav-item nav-link" href="#page1">Page1</a>
+              <a class="btn nav-item nav-link" href="#page2">Page2</a>
+              <a class="btn nav-item nav-link" href="#page3">Page3</a>
+            </div>
+            <!-- Navbar Right Side - to be used with user authentification-->
+            <div class="navbar-nav">
+            </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main role="main" class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <!-- messages -->
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+        
+        <!-- main content-->
+        {% block content %}{% endblock %}
+      </div>
+      <div class="col-md-4">
+        <!-- sidebar -->
+        {% block sidebar%}{% endblock %}
+        
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+  <div class="container">
+  <div class="row">
+  <div class="col-md-8 col-sm-12">
+      <span class="text-muted">
+        <a class="text-muted" href="#contact"> Contact</a> |
+        <a class="text-muted" href="#privacy_policy">Privacy Policy</a>
+      </span>
+  </div>
+  <div class="col-md-4 col-sm-12">
+      <span class="text-muted">Copyright 2020 name ></span>
+  </div>
+  </div>
+  </div>
+  </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>

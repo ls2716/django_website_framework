@@ -1,0 +1,109 @@
+
+/* basic document settings - min-height for footer */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/*  padding for fixed navbar and footer at the bottom */
+body {
+
+  padding-bottom: 70px;
+  padding-top: 75px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  
+}
+
+.verdana {
+  font-family: Verdana;
+}
+
+
+.navbar-brand {
+  padding-left: 20px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+
+}
+/* Navbar styling */
+.site-header .navbar  {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  min-height: 60px;
+  padding-bottom: 0px;
+}
+
+/* big screeen navbat btn height adjustment */
+@media screen and (min-width: 768px) {
+  .site-header .navbar-nav .btn {
+    height: 60px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* Small shade adjustment */
+  .site-header .navbar {
+    padding-bottom: 1px;
+  }
+  .site-header .navbar-nav .btn {
+    height: 50px;
+  }
+  /* Two-line footer */
+  body {
+    padding-bottom: 130px;
+  }
+}
+
+
+/* Disable blue outline of the toggler */
+.navbar-toggler {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+/* Button styling */
+.site-header .navbar-nav .btn {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 0px;
+}
+
+.site-header .navbar-nav .btn:hover {
+  /* box-shadow: 0px 0px 4px #888888; */
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+/* Disable blue outline */
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+/* Footer settings */
+.footer {
+  border-top-style: solid;
+  border-top-width: 1px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 60px;
+  line-height: 59px;
+  background-color: #fff;
+}
+
+.footer .container .row {
+  width: 100%;
+}
+

@@ -1,0 +1,52 @@
+
+/* change nav class to navbar-light and bg-white in the base.hmtl */
+
+
+/* basic document settings - min-height for footer */
+
+/*  padding for fixed navbar and footer at the bottom */
+body {
+  background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+}
+
+
+.navbar-brand {
+  color: #000;
+}
+/* Navbar styling */
+.site-header .navbar  {
+  border-color: #000;
+  box-shadow: 0px 0px 15px 15px #fff;
+  background-color: #fff;
+}
+
+
+/* Button styling */
+.site-header .navbar-nav .btn {
+  color: #000;
+}
+
+.site-header .navbar-nav .btn:hover {
+  box-shadow: 0px 0px 4px #888888;
+}
+
+
+
+/* Footer settings */
+.footer {
+  border-top-color: black;
+  background-color: #fff;
+}
+
+
+.jumbotron {
+  background: #fff;
+}
+
+.bg-grey {
+  background: #eee;
+}
