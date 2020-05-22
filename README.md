@@ -1,4 +1,4 @@
-# django website template
+# django website framework
 
 Framework for creating new django websites
 
