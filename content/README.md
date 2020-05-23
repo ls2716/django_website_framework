@@ -14,7 +14,7 @@ Additionally, [rules.md](/rules.md) file describes a rule set which should be fo
 
 - [**page icon**](page_icon/) - how to setup the website icon
 
-- **admin setup** - how to setup admin for the website
+- [**admin setup**](admin_setup/) - how to setup admin for the website
 
 - **basic models** - how to create simple django models and use them
 
