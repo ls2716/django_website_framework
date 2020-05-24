@@ -16,7 +16,7 @@ Additionally, [rules.md](/rules.md) file describes a rule set which should be fo
 
 - [**admin setup**](admin_setup/) - how to setup admin for the website
 
-- **basic models** - how to create simple django models and use them
+- [**basic models**](basic_models/) - how to create simple django models and use them
 
 - [**media**](media/) - how to add media files to the website
 
@@ -24,7 +24,7 @@ Additionally, [rules.md](/rules.md) file describes a rule set which should be fo
 
 - **pagination** - how to create pagination for the pages
 
-- **users** how to add users to your website (includes registration, login, logout)
+- **users registration** how to enable user registration to your website
 
 - **email** - how to add email functionality to your website 
 

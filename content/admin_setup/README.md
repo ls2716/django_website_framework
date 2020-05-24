@@ -1,4 +1,4 @@
-# Page icon
+# Admin setup
 
 Prerequisites: 
 
