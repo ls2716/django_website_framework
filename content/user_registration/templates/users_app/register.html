@@ -1,0 +1,35 @@
+{% extends '<app_name>/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <link rel="stylesheet" type="text/css" href="{% static '<app_name>/<page_name>.css' %}">
+  <div class="jumbotron mb-0 py-4">
+    <h2 class="title">Register</h2>
+  </div>
+  <div>
+    <form method='POST'>
+      {% csrf_token %}
+      <fieldset class='form-group'>
+        
+        {{ form|crispy }}
+      </fieldset>
+      <div class='form-group'>
+        <button class='btn btn-outline-info' type='submit'>Sign up</button>
+      </div>
+    </form>
+    <div class='border-top pt-3'>
+      <small class='test-muted'>
+        Already have an account? <a href='#' class='ml-2'>Sign In</a>
+      </small>
+    </div>
+  </div>
+  
+
+{% endblock content %}
+
+{% block sidebar %}
+{% endblock sidebar %}
+
+{% block title_block %}
+- register
+{% endblock title_block%}

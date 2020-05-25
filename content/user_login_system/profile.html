@@ -1,0 +1,21 @@
+{% extends '<app_name>/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static '<app_name>/home.css' %}">
+<div class="jumbotron mb-0 py-4">
+  <h2 class="title">{{ user.username }}</h2>
+</div>
+<div>
+  
+</div>
+  
+
+{% endblock content %}
+
+{% block sidebar %}
+{% endblock sidebar %}
+
+{% block title_block %}
+- register
+{% endblock title_block%}

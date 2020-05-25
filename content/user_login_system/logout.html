@@ -1,0 +1,25 @@
+{% extends '<app_name>/base.html' %}
+{% load static %}
+
+{% block content %}
+  <link rel="stylesheet" type="text/css" href="{% static '<app_name>/home.css' %}">
+
+  <h2 class="title mt-3">You have been logged out.</h2>
+  <div>
+    
+    <div class='border-top pt-3'>
+      <small class='test-muted'>
+        <a href="{% url 'login' %}" class=''>Log in again</a>
+      </small>
+    </div>
+  </div>
+  
+
+{% endblock content %}
+
+{% block sidebar %}
+{% endblock sidebar %}
+
+{% block title_block %}
+- register
+{% endblock title_block%}

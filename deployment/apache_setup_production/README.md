@@ -36,8 +36,11 @@ sudo chown :www-data <project_name>/
 sudo chmod 775 <project_name>/
 sudo chown -R :www-data <project_name>/media/
 sudo chmod -R 775 <project_name>/media
+sudo chown -R :www-data <project_name>/static/
+sudo chmod -R 775 <project_name>/static
 ```
 
+**Note: The above command will have to be executed every time either of the files/folders are copied to the remote.**
 
 
 ## Step 2: Save the secret variables into a configuration file.
