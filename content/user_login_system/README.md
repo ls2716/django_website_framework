@@ -92,6 +92,8 @@ LOGIN_REDIRECT_URL = 'loginsuccess'
 </div>
 ```
 
-1.6 Verify the success.
+1.6 Edit the register.html template to update the link to the login page (at the end).
 
-1.7 Optionally, edit the django/contrib/auth/decorators.py file to add error message when login is required. Then edit the base.html to add logic for bootstrap's alert-danger class instead of alert-error class.
+1.7 Verify the success.
+
+1.8 Optionally, edit the django/contrib/auth/decorators.py file to add error message when login is required. Then edit the base.html to add logic for bootstrap's alert-danger class instead of alert-error class.
