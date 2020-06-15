@@ -1,6 +1,7 @@
 # django website framework
 
-Framework for creating new django websites
+Framework for creating new django websites.
+Project within Surycate project.
 
 #### version 1.0.0
 
@@ -9,9 +10,9 @@ Framework for creating new django websites
 
 #### Frameworks used:
 
-- [framework for frameworks](../framework_for_frameworks/)
-- [evaluation framework](../evaluation_framework/)
-- [change framework](../change_framework/)
+- framework for frameworks
+- evaluation framework
+- change framework
 
 ### Motivation:
 
