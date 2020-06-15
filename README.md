@@ -58,8 +58,8 @@ This part contains framework for deployment of the website to the server.
 
 ### Evaluation method
 
-Standard framework evaluation rule set defined in the [evaluation framework](../evaluation_framework/). It applies to all parts of the framework.
+Standard framework evaluation rule set defined in the evaluation framework of the project Surycate. It applies to all parts of the framework.
 
 ### Adjustment method
 
-Standard framework change rule set defined in the [change framework](../change_framework/). It applies to all parts of the framework.
+Standard framework change rule set defined in the change framework of the project Surycate. It applies to all parts of the framework.
