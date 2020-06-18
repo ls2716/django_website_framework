@@ -1,6 +1,11 @@
 # Django Website Framework
 
+<<<<<<< HEAD
 Framework for creating new Django websites.
+=======
+Framework for creating new django websites.
+Project within Surycate project.
+>>>>>>> f7c1f139260023c100245565f62fedb6e03a4f4c
 
 #### version 1.0.0
 
@@ -9,9 +14,9 @@ Framework for creating new Django websites.
 
 #### Frameworks used:
 
-- [framework for frameworks](../framework_for_frameworks/)
-- [evaluation framework](../evaluation_framework/)
-- [change framework](../change_framework/)
+- framework for frameworks
+- evaluation framework
+- change framework
 
 ### Motivation:
 
@@ -58,8 +63,8 @@ This part contains framework for deployment of the website to the server.
 
 ### Evaluation method
 
-Standard framework evaluation rule set defined in the [evaluation framework](../evaluation_framework/). It applies to all parts of the framework.
+Standard framework evaluation rule set defined in the evaluation framework of the project Surycate. It applies to all parts of the framework.
 
 ### Adjustment method
 
-Standard framework change rule set defined in the [change framework](../change_framework/). It applies to all parts of the framework.
+Standard framework change rule set defined in the change framework of the project Surycate. It applies to all parts of the framework.
