@@ -6,7 +6,6 @@ from git import Repo
 # initialize git repo
 repo = Repo('.')
 
-
 while True:
     message = repo.git.pull()
     if message!='Already up to date.':

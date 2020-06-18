@@ -1,0 +1,31 @@
+{% extends '<app_name>/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'users_app/profile.css' %}">
+
+<div class="jumbotron mb-0 py-4">
+  <h2 class="title">Edit profile</h2>
+</div>
+  <form method='POST' enctype="multipart/form-data">
+    {% csrf_token %}
+    <fieldset class='form-group'>
+      {{ u_form|crispy }}
+      {{ p_form|crispy }}
+    </fieldset>
+    <div class='form-group'>
+      <button class='btn btn-outline-info' type='submit'>Confirm changes</button>
+      <a class='btn btn-outline-danger' href="{% url 'profile' %}">Cancel</a>
+    </div>
+  </form>
+
+  
+
+{% endblock content %}
+
+{% block sidebar %}
+{% endblock sidebar %}
+
+{% block title_block %}
+- edit profile
+{% endblock title_block%}

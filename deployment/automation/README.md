@@ -71,3 +71,17 @@ Then exit the screen using Ctrl+A Crtl+D.
 
 In case of errors, just don't detach the screen and you should be able to see any errors.
 
+## Step 4: Note for copying not tracked data.
+
+For copying not tracked data i.e. media or database it is necessary to reset the correct permissions.
+
+To do it you can use the script in this folder called permissions.sh. You have to set up no password sudo execute for it analogically as in step 2. At the beginning of the file you should set up the cd to the directory of the project. This is very important!
+
+Then to copy the files through use (on the local machine):
+
+```bash
+# copy (folder can be a sqlite database)
+scp -r <folder> <username>@<hostname>:~/<project_name>/<folder>
+# set permissions
+ssh <username>@<hostname> -f 'sudo ./<project_name>/permissions.sh'
+```

@@ -1,6 +1,6 @@
-# django website framework
+# Django Website Framework
 
-Framework for creating new django websites
+Framework for creating new Django websites.
 
 #### version 1.0.0
 

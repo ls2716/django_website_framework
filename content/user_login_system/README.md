@@ -12,24 +12,21 @@ Prerequisites:
 
 ## Step 1: Create login logout system.
 
-1.1 In the urls.py in the <project_name>/<project_name> folder add following lines:
+1.1 In the urls.py in the <project_name>/users_app folder add following lines:
 
 ```python
-#...
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views # new line
 
-import users_app.views as user_views
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('<app_name>.urls')),
-    path('register/', user_views.register, name='register'),
-    path('profile/', user_views.profile, name='profile'),
-    path('loginsuccess/', user_views.login_success, name='loginsuccess'),
+    path('register/', uviews.register, name='register'),
+    path('profile/', views.profile, name='profile'),
+    path('loginsuccess/', views.login_success, name='loginsuccess'),
     path('login/', auth_views.LoginView.as_view(template_name='users_app/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users_app/logout.html'), name='logout'), 
-    path('logoutsuccess/', user_views.logout_success, name='logoutsuccess'),
+    path('logoutsuccess/', views.logout_success, name='logoutsuccess'),
 ]
 ```
 
@@ -96,4 +93,31 @@ LOGIN_REDIRECT_URL = 'loginsuccess'
 
 1.7 Verify the success.
 
-1.8 Optionally, edit the django/contrib/auth/decorators.py file to add error message when login is required. Then edit the base.html to add logic for bootstrap's alert-danger class instead of alert-error class.
+1.8 Optionally, edit the django/contrib/auth/decorators.py file to add error message when login is required. The added line should look like following:
+
+
+```python
+def decorator(view_func):
+        @wraps(view_func)
+        def _wrapped_view(request, *args, **kwargs):
+            if test_func(request.user):
+                return view_func(request, *args, **kwargs)
+            path = request.build_absolute_uri()
+            resolved_login_url = resolve_url(login_url or settings.LOGIN_URL)
+            # If the login url is the same scheme and net location then just
+            # use the path as the "next" url.
+            login_scheme, login_netloc = urlparse(resolved_login_url)[:2]
+            current_scheme, current_netloc = urlparse(path)[:2]
+            if ((not login_scheme or login_scheme == current_scheme) and
+                    (not login_netloc or login_netloc == current_netloc)):
+                path = request.get_full_path()
+            from django.contrib import messages # new line
+            messages.error(request, f'You have to log in to access that page.') # new line
+            from django.contrib.auth.views import redirect_to_login
+            return redirect_to_login(
+                path, resolved_login_url, redirect_field_name)
+        return _wrapped_view
+    return decorator
+```
+
+OR edit the login.html template to display the message if url contains parameter next. This will work for LoginRequiredMixin class as well.

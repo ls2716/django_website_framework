@@ -49,8 +49,12 @@
         <!-- messages -->
         {% if messages %}
           {% for message in messages %}
+            {% if message.tags == "error" %} <!-- for bootstrap4 class -->
+            <div class="alert alert-danger mt-2 mb-0">
+            {% else %}
             <div class="alert alert-{{ message.tags }} mt-2 mb-0">
-              {{ message }}
+            {% endif %}
+              {{ message|safe }}
             </div>
           {% endfor %}
         {% endif %}

@@ -20,16 +20,22 @@ Additionally, [rules.md](/rules.md) file describes a rule set which should be fo
 
 - [**media**](media/) - how to add media files to the website
 
-- **advanced models** - how to create complicated, interconnected models and use them
+- [**user registration**](user_registration/) how to enable user registration to your website
 
-- **pagination** - how to create pagination for the pages
+- [**user login system**](user_login_system/) how to setup user login logout system
 
-- **users registration** how to enable user registration to your website
+- [**user profile**](user_profile/) how to setup user profile
 
-- **email** - how to add email functionality to your website 
+- [**user profile update**](user_profile_update/) how to setup user profile update system
 
-- **object creation** - how to enable users to create objects
+- [**email setup**](email_setup/) - how to add email functionality to your website 
+
+- [**password reset**](password_reset/) - how to add email functionality to your website 
+
+- [**generic views**](generic_views/) - how to use generic views
   
-- **messages** - how to add messages functionality
+- [**messages**] - how to use messages functionality
   
-- **chats** - how to create a chat
+- [**pagination**] - how to create pagination for the pages
+
+- [**advanced models**] - how to create complicated, interconnected models and use them

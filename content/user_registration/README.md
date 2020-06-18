@@ -21,7 +21,7 @@ For more info about forms go to [Django documentation](https://docs.djangoprojec
 
 1.3 Update the 'templates/users_app/register.html' file to fill app_name and page name values.
 
-1.3 In the urls.py file in the <project_name>/<project_name> directory, add a path ro the register page and import the views of the users_app:
+1.4 In the urls.py file in the <project_name>/<project_name> directory, add an include to the urls.py file of the users_app. The prefix for the users_app should be 'accounts/' as it is good for SEO of the page. 
 
 ```python
 import users_app.views as user_views # added line
@@ -29,11 +29,24 @@ import users_app.views as user_views # added line
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('test_app.urls')),
-    path('register/', user_views.register, name='register'), # added line
+    path('accounts/', include('users_app.urls')), # added line
 ]
 ```
 
-1.4 Go to the base.html and add a link in the navigation bar to the register page. It should look like following:
+1.5 Create a urls.py file in the users_app folder. It should have following contents:
+
+```python
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    # path pattern to the basic view
+    path('register/', views.register, name='register'),
+]
+```
+
+1.6 Go to the base.html and add a link in the navigation bar to the register page. It should look like following:
 
 ```html
 <div class="collapse navbar-collapse" id="navbarToggle">

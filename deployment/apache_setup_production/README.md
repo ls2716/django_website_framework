@@ -27,17 +27,18 @@ sudo apt-get install libapache2-mod-wsgi-py3
 
 1.3 Copy the template site configuration to /etc/apache2/sites-available/ from the template provided in this folder. Replace all blanks: <username>, <project_name>, <ip_address> and <domain_name> appriopriately. 
 
-1.4 Change the ownership of the database and media folder so it can be accessed by apache. On the remote, in the home filder, type:
+1.4 Change the ownership of the database and media folder so it can be accessed by apache. On the remote, in the project folder, type:
 
 ```bash
-sudo chown :www-data <project_name>/db.sqlite3
-sudo chmod 664 <project_name>/db.sqlite3
-sudo chown :www-data <project_name>/
-sudo chmod 775 <project_name>/
-sudo chown -R :www-data <project_name>/media/
-sudo chmod -R 775 <project_name>/media
-sudo chown -R :www-data <project_name>/static/
-sudo chmod -R 775 <project_name>/static
+sudo chown :www-data db.sqlite3
+sudo chmod 664 db.sqlite3
+sudo chown :www-data ./
+sudo chmod 775 ./
+sudo chown -R :www-data media/
+sudo chmod -R 775 media
+sudo chown -R :www-data static/
+sudo chmod -R 775 static
+# + other folders
 ```
 
 **Note: The above command will have to be executed every time either of the files/folders are copied to the remote.**
