@@ -1,11 +1,7 @@
 # Django Website Framework
 
-<<<<<<< HEAD
 Framework for creating new Django websites.
-=======
-Framework for creating new django websites.
 Project within Surycate project.
->>>>>>> f7c1f139260023c100245565f62fedb6e03a4f4c
 
 #### version 1.0.0
 
