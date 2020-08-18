@@ -39,3 +39,5 @@ Additionally, [rules.md](/rules.md) file describes a rule set which should be fo
 - [**pagination**] - how to create pagination for the pages
 
 - [**advanced models**] - how to create complicated, interconnected models and use them
+
+- [**private**] - how to create pages and media files with private access
