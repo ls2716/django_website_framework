@@ -1,18 +1,7 @@
 # Django Website Framework
 
-Framework for creating new Django websites.
-Project within Surycate project.
+Framework for quickly creating robust Django websites.
 
-#### version 1.0.0
-
-#### author: ls2716
-
-
-#### Frameworks used:
-
-- framework for frameworks
-- evaluation framework
-- change framework
 
 ### Motivation:
 
@@ -52,15 +41,11 @@ the work.
 
 #### Deployment processes and rule sets
 
-This part contains framework for deployment of the website to the server.
-
+This part contains framework for deployment of the website to the server. Currently on a remote Linux server.
 
 [Please click here to go to the subfolder explaining the deployment framework.](deployment/)
 
-### Evaluation method
+#### version 1.0.0
 
-Standard framework evaluation rule set defined in the evaluation framework of the project Surycate. It applies to all parts of the framework.
+#### author: ls2716
 
-### Adjustment method
-
-Standard framework change rule set defined in the change framework of the project Surycate. It applies to all parts of the framework.
