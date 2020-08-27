@@ -47,7 +47,7 @@ urlpatterns = [
     path('<app_name_pattern>', include('<app_name>.urls')) # added line
 ]
 ```
-where <app_name_pattern> can be '' to point to website entry point or anything else ending with a '/' e.g. '<app_name>/'.
+where <app_name_pattern> can either be '' to point to website entry point or anything else ending with a '/' e.g. '<app_name>/'.
 
 2.3 In the app folder create an urls.py file and add content:
 ``` python
