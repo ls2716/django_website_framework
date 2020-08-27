@@ -5,10 +5,10 @@ This part presents how to deploy the djang website on the web. The current metho
 Prerequisites:
 
 From the django website framework:
-- [initial setup](../../initial_setup/) (created django project)
-- [new app setup](../new_app_setup/) (created new app)
-- [basic content](../basic_content/) (have a simple html page)
-- [media](../media/) (setup for adding media files to the website)
+- [initial setup](../initial_setup/) (created django project)
+- [new app setup](../content/new_app_setup/) (created new app)
+- [basic content](../content/basic_content/) (have a simple html page)
+- [media](../content/media/) (setup for adding media files to the website)
 
 Other:
 - linux server with ssh access and root privileges
