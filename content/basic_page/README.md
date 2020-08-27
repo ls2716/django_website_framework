@@ -19,7 +19,7 @@ def <new_view>(request):
     return render(request, '<app_name>/<template_name>', context)
 ```
 
-1.3 Make sure that views.py script import render function from django.shortcuts .
+1.3 Make sure that views.py script imports function 'render' from django.shortcuts .
 
 1.4 Add an url pointing to the new view by adding a string to the urlpatters list in the urls.py file:
 ```python
