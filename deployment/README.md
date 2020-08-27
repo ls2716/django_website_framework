@@ -7,7 +7,7 @@ Prerequisites:
 From the django website framework:
 - [initial setup](../initial_setup/) (created django project)
 - [new app setup](../content/new_app_setup/) (created new app)
-- [basic content](../content/basic_content/) (have a simple html page)
+- [basic page](../content/basic_page/) (have a simple html page)
 - [media](../content/media/) (setup for adding media files to the website)
 
 Other:
