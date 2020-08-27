@@ -29,7 +29,7 @@ urlpatterns = [
     # path pattern to the basic view
     path('', views.<basic_view_name>, name='<basic_view_name>'),
     # path pattern to the new view
-     path('new_view', views.<new_view>, name='<new_view>'), # new line added
+    path('<new_view_pattern>/', views.<new_view>, name='<new_view>'), # new line added
 ]
 ```
 To create a link to the page set anchor tag (a) href to "{% url '<app_name>:<new_view>' %}".
