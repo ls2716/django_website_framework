@@ -6,9 +6,7 @@ This part shows how to perform initial setup of a Django website.
 
 **Requirements:** Python 3 Anaconda or Python 3 virtualenv and pip
 
-1.1 Download [requirements.txt](requirements.txt) from the initial_setup subdirectory.
-
-Then:
+1.1 
 
 #### a) with conda:
 
@@ -22,9 +20,9 @@ conda create -n django_env python=3
 ```
 conda activate django_env
 ```
-1.4a Install dependencies from the requirements file:
+1.4a Install Django:
 ```
-conda install --file requirements.txt
+conda install Django
 ```
 
 #### b) with virtualenv and pip:
@@ -39,9 +37,9 @@ python3 -m venv venv
 ```
 source venv/bin/activate
 ```
-1.4b Install dependencies from the requirements file:
+1.4b Install Django:
 ```
-python3 -m pip install -r requirements.txt
+python3 -m pip install Django
 ```
 
 ## Step 2: Create a new Django website project
