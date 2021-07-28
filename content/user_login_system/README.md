@@ -46,7 +46,6 @@ def login_success(request):
     return redirect('<app_name>:home')
 
 def logout_success(request):
-    logout(request)
     messages.success(request, 'You have successfully logged out.\
          <a href=\"login/"> Log back in </a> ')
     return redirect('home:home')
