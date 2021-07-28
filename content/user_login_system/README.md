@@ -12,16 +12,17 @@ Prerequisites:
 
 ## Step 1: Create login logout system.
 
-1.1 In the urls.py in the <project_name>/users_app folder add following lines:
+1.1 Change the urls.py in the <project_name>/users_app folder to following:
 
 ```python
+from django.urls import path
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views # new line
 
 from . import views
 
 urlpatterns = [
-    path('register/', uviews.register, name='register'),
+    path('register/', views.register, name='register'),
     path('profile/', views.profile, name='profile'),
     path('loginsuccess/', views.login_success, name='loginsuccess'),
     path('login/', auth_views.LoginView.as_view(template_name='users_app/login.html'), name='login'),
